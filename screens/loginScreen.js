@@ -24,7 +24,7 @@ export default class LoginScreen extends React.Component {
       try {
           const response = await firebase.auth().signInWithEmailAndPassword(email,password);
           if(response){
-            this.props.navigation.navigate("ReadStoryScreen");
+            this.props.navigation.navigate("Read");
           }
       } catch (error) {
           switch(error.code){
